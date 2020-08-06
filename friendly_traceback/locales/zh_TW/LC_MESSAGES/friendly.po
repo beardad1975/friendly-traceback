@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: friendly-traceback\n"
 "POT-Creation-Date: 2020-08-01 08:12-0300\n"
-"PO-Revision-Date: 2020-08-06 16:24+0800\n"
+"PO-Revision-Date: 2020-08-07 07:31+0800\n"
 "Language-Team: Wen-Hung, Chang\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -392,7 +392,7 @@ msgid ""
 "This exception indicates that a certain object could not\n"
 "be imported from a module or package. Most often, this is\n"
 "because the name of the object is not spelled correctly.\n"
-msgstr ""
+msgstr "    匯入模組發生錯誤\n"
 
 #: info_generic.py:68
 msgid ""
@@ -428,7 +428,7 @@ msgid ""
 "are trying to import a module that cannot be found by Python.\n"
 "This could be because you misspelled the name of the module\n"
 "or because it is not installed on your computer.\n"
-msgstr ""
+msgstr "    錯誤, 找不到要匯入的模組\n"
 
 #: info_generic.py:119
 msgid ""
@@ -516,7 +516,7 @@ msgstr "在你的程式中, 物件'{obj}'並沒有屬性或物件方法'{attr}' 
 
 #: info_specific.py:60
 msgid "Perhaps you meant to write '{correct}' instead of '{typo}'\n"
-msgstr ""
+msgstr "想要輸入的是 '{correct}', 但是打錯成了 '{typo}'\n"
 
 #: info_specific.py:64
 msgid ""
@@ -543,6 +543,9 @@ msgid ""
 "The module or package where it was \n"
 "expected to be found is '{module}'.\n"
 msgstr ""
+"想要從模組'{module}'匯入 '{name}'\n"
+"但是無法匯入\n"
+"仔細檢查一下, 有沒有打錯字\n"
 
 #: info_specific.py:113
 msgid "The object that could not be imported is '{name}'.\n"
@@ -589,6 +592,9 @@ msgid ""
 "In your program, the name of the\n"
 "module that cannot be found is '{mod_name}'.\n"
 msgstr ""
+"想要匯入 '{mod_name}' 模組\n"
+"但是模組名稱打錯\n"
+"也可能是模組未安裝於目前的Python\n"
 
 #: info_specific.py:192
 msgid "In your program, the unknown name is '{var_name}'.\n"
