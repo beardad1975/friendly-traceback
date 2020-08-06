@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: friendly-traceback\n"
 "POT-Creation-Date: 2020-08-01 08:12-0300\n"
-"PO-Revision-Date: 2020-08-06 05:21+0800\n"
+"PO-Revision-Date: 2020-08-06 14:07+0800\n"
 "Language-Team: Wen-Hung, Chang\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,14 +27,14 @@ msgid ""
 "However, I do not recognize this information and I have\n"
 "to guess what caused the problem, but I might be wrong.\n"
 "\n"
-msgstr ""
+msgstr " \n"
 
 #: analyze_syntax.py:68
 msgid ""
 "I make an effort below to guess what caused the problem\n"
 "but I might guess incorrectly.\n"
 "\n"
-msgstr ""
+msgstr " \n"
 
 #: analyze_syntax.py:96
 msgid ""
@@ -54,7 +54,7 @@ msgstr ""
 msgid ""
 "I do not recognize this case. Please report it to\n"
 "https://github.com/aroberge/friendly-traceback/issues\n"
-msgstr ""
+msgstr " \n"
 
 #: analyze_type_error.py:41
 msgid "a complex number"
@@ -90,13 +90,15 @@ msgstr "字串 (`str`)"
 
 #: analyze_type_error.py:57
 msgid "a `tuple`"
-msgstr "元組 `tuple`"
+msgstr " `tuple`"
 
 #: analyze_type_error.py:72 analyze_type_error.py:90
 msgid ""
 "You tried to concatenate (add) two different types of objects:\n"
 "{first} and {second}\n"
 msgstr ""
+"想要串接的物件不相容:\n"
+"{first} and {second}\n"
 
 #: analyze_type_error.py:109
 msgid ""
@@ -104,25 +106,31 @@ msgid ""
 "{first} and {second}\n"
 msgstr ""
 "想要相加的物件不相容\n"
-"如{first} 和 {second}, 請仔細檢查\n"
+"如{first} 和 {second}\n"
 
 #: analyze_type_error.py:116
 msgid ""
 "You tried to subtract two incompatible types of objects:\n"
 "{first} and {second}\n"
 msgstr ""
+"想要相減的物件不相容:\n"
+"{first} and {second}\n"
 
 #: analyze_type_error.py:123
 msgid ""
 "You tried to multiply two incompatible types of objects:\n"
 "{first} and {second}\n"
 msgstr ""
+"想要相乘的物件不相容:\n"
+"{first} and {second}\n"
 
 #: analyze_type_error.py:130
 msgid ""
 "You tried to divide two incompatible types of objects:\n"
 "{first} and {second}\n"
 msgstr ""
+"想要相除的物件不相容:\n"
+"{first} and {second}\n"
 
 #: analyze_type_error.py:137
 msgid ""
@@ -130,6 +138,8 @@ msgid ""
 "on two incompatible types of objects:\n"
 "{first} and {second}\n"
 msgstr ""
+"想要做位元運算的物件不相容:\n"
+"{first} and {second}\n"
 
 #: analyze_type_error.py:147
 msgid ""
@@ -137,6 +147,8 @@ msgid ""
 "on two incompatible types of objects:\n"
 "{first} and {second}\n"
 msgstr ""
+"想要做位元位移運算的物件不相容:\n"
+"{first} and {second}\n"
 
 #: analyze_type_error.py:157
 msgid ""
@@ -144,6 +156,8 @@ msgid ""
 "using two incompatible types of objects:\n"
 "{first} and {second}\n"
 msgstr ""
+"想要做次方運算的物件不相容:\n"
+"{first} and {second}\n"
 
 #: analyze_type_error.py:165
 msgid ""
@@ -153,6 +167,10 @@ msgid ""
 "This operator is normally used only\n"
 "for multiplication of matrices.\n"
 msgstr ""
+"想要使用的運算 {operator}在不相容的物件上\n"
+"{first} and {second}.\n"
+"這個運算符號通常是用在矩陣乘法\n"
+"\n"
 
 #: analyze_type_error.py:188
 msgid ""
@@ -160,6 +178,8 @@ msgid ""
 "between two incompatible types of objects:\n"
 "{first} and {second}\n"
 msgstr ""
+"想要比較的運算({operator})物件不相容\n"
+"{first} and {second}\n"
 
 #: analyze_type_error.py:210
 msgid ""
@@ -167,6 +187,8 @@ msgid ""
 "with the following type of object: {obj}.\n"
 "This operation is not defined for this type of object.\n"
 msgstr ""
+"想要對{obj}物件做的一元運算 '{operator}'.\n"
+"但物件並未定義此運算.\n"
 
 #: analyze_type_error.py:227
 msgid ""
@@ -175,10 +197,12 @@ msgid ""
 "You tried change part of such an immutable object: {obj},\n"
 "most likely by using an indexing operation.\n"
 msgstr ""
+"想要更改不可變物件{obj}的值\n"
+"Python物件有些是不可變的(定義後，物件內容就不能改)\n"
 
 #: analyze_type_error.py:242
 msgid "In Python 3, exceptions must be derived from BaseException.\n"
-msgstr ""
+msgstr "在Python3, 例外必須要繼承自BaseException.\n"
 
 #: analyze_type_error.py:253
 msgid ""
@@ -186,12 +210,17 @@ msgid ""
 "{nb_given} positional argument while it requires {nb_required}\n"
 "such positional arguments.\n"
 msgstr ""
+"想要呼叫功能函式的引數數量不合\n"
+"你呼叫功能函式{fn_name} 給了{nb_given} 位置引數\n"
+"但它需要 {nb_required}個\n"
 
 #: analyze_type_error.py:273
 msgid ""
 "You apparently have called the function '{fn_name}' with\n"
 "fewer positional arguments than it requires ({nb_required} missing).\n"
 msgstr ""
+"想要呼叫功能函式'{fn_name}'的引數數量不足\n"
+"還少了{nb_required}個位置引數\n"
 
 #: analyze_type_error.py:288
 msgid ""
@@ -206,30 +235,30 @@ msgid ""
 "I suspect that you are using a regular\n"
 "Python console after importing Friendly-traceback.\n"
 "Unfortunately, no further processing can be done.\n"
-msgstr ""
+msgstr " \n"
 
 #: core.py:232
 msgid ""
 "Unfortunately, no additional information is available:\n"
 "the content of file '<stdin>' is not accessible.\n"
 "Are you using a regular Python console instead of a Friendly-console?\n"
-msgstr ""
+msgstr " \n"
 
 #: core.py:244
 msgid ""
 "Unfortunately, no additional information is available:\n"
 "the content of file '<string>' is not accessible.\n"
-msgstr ""
+msgstr " \n"
 
 #: core.py:267
 msgid "Exception raised on line {linenumber} of file '{filename}'.\n"
-msgstr ""
+msgstr " \n"
 
 #: core.py:360
 msgid ""
 "Python's error message (invalid syntax) cannot be used to identify the "
 "problem:"
-msgstr "  "
+msgstr " "
 
 #: core.py:365
 msgid "Likely cause based on the information given by Python:"
@@ -424,7 +453,7 @@ msgid ""
 "to combine two incompatible types of objects,\n"
 "by calling a function with the wrong type of object,\n"
 "or by tring to do an operation not allowed on a given type of object.\n"
-msgstr "    類型錯誤(運算或功能函式呼叫類型不一致)\n"
+msgstr "    類型錯誤(運算或功能函式呼叫類型不一致等)\n"
 
 #: info_generic.py:182
 msgid ""
@@ -449,7 +478,7 @@ msgid ""
 "No information is known about this exception.\n"
 "Please report this example to\n"
 "https://github.com/aroberge/friendly-traceback/issues\n"
-msgstr ""
+msgstr " \n"
 
 #: info_generic.py:216
 msgid ""
