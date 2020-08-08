@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: friendly-traceback\n"
 "POT-Creation-Date: 2020-08-01 08:12-0300\n"
-"PO-Revision-Date: 2020-08-07 15:34+0800\n"
+"PO-Revision-Date: 2020-08-08 10:38+0800\n"
 "Language-Team: Wen-Hung, Chang\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -421,6 +421,8 @@ msgid ""
 "when a key or index used on a mapping or sequence is invalid.\n"
 "It can also be raised directly by codecs.lookup().\n"
 msgstr ""
+"    查詢錯誤是因為在對物件做查詢時\n"
+"    所用的鍵或是索引錯誤\n"
 
 #: info_generic.py:108
 msgid ""
@@ -444,6 +446,8 @@ msgid ""
 "An OverflowError is raised when the result of an arithmetic operation\n"
 "is too large to be handled by the computer's processor.\n"
 msgstr ""
+"    溢位錯誤是因為運算的結果數值太大\n"
+"    電腦已無法處理\n"
 
 #: info_generic.py:141
 msgid ""
@@ -452,6 +456,8 @@ msgid ""
 "It almost always indicates that you made an error in your code\n"
 "and that your program would never stop.\n"
 msgstr ""
+"    遞迴錯誤是函式直接或間接呼叫本身太多次\n"
+"    大部份是因所寫的程式有誤，讓遞迴停不下來\n"
 
 #: info_generic.py:152
 msgid "A SyntaxError occurs when Python cannot understand your code.\n"
@@ -466,6 +472,8 @@ msgid ""
 "by inserting either spaces or tab characters at the beginning of lines.\n"
 "Python's recommendation is to always use spaces to indent your code.\n"
 msgstr ""
+"    Tab錯誤是混合空白鍵及Tab來做縮排\n"
+"    這會讓Python難以正確識別區塊\n"
 
 #: info_generic.py:171
 msgid ""
@@ -479,7 +487,7 @@ msgstr "    類型錯誤(運算或功能函式呼叫類型不一致等)\n"
 msgid ""
 "A ValueError indicates that a function or an operation\n"
 "received an argument of the right type, but an inappropriate value.\n"
-msgstr ""
+msgstr "    值錯誤是指運算符號或功能函式接收到的值不正確\n"
 
 #: info_generic.py:191
 msgid ""
@@ -491,7 +499,7 @@ msgid ""
 "a global variable inside a function without first indicating to\n"
 "Python that this is a global variable, otherwise you will see\n"
 "an UnboundLocalError.\n"
-msgstr ""
+msgstr "    區域變數錯誤\n"
 
 #: info_generic.py:206
 msgid ""
@@ -616,6 +624,9 @@ msgid ""
 "    global {var_name}\n"
 "should have been included as the first line inside your function.\n"
 msgstr ""
+"要使用區域變數 '{var_name}', 但忘了先設值\n"
+"也有可能是你想要存取全域變數(在最上層的區塊)\n"
+"但忘了在功能函式開題先加上global  '{var_name}'\n"
 
 #: line_analyzer.py:105
 msgid ""
@@ -643,6 +654,8 @@ msgid ""
 "This is not allowed.\n"
 "\n"
 msgstr ""
+"你想要對Python關鍵字設值\n"
+"這是不允許的\n"
 
 #: line_analyzer.py:182
 msgid ""
@@ -664,13 +677,13 @@ msgstr ""
 msgid ""
 "You cannot use the Python keyword {word} as an attribute.\n"
 "\n"
-msgstr ""
+msgstr "屬性不能使用Python關鍵字 {word} \n"
 
 #: line_analyzer.py:223
 msgid ""
 "You cannot use the constant __debug__ as an attribute.\n"
 "\n"
-msgstr ""
+msgstr "屬性不能使用__debug__  \n"
 
 #: line_analyzer.py:242
 msgid ""
@@ -731,6 +744,9 @@ msgid ""
 "In older version of Python, 'print' was a keyword.\n"
 "Now, 'print' is a function; you need to use parentheses to call it.\n"
 msgstr ""
+"在舊版的Python2, 'print' 是關鍵字\n"
+"但現在, 'print' 是功能函式\n"
+"使用時要加上小括號(圓括號)\n"
 
 #: line_analyzer.py:387
 msgid ""
@@ -752,7 +768,7 @@ msgstr ""
 msgid ""
 "{keyword} is a constant in Python; you cannot assign it a value.\n"
 "\n"
-msgstr ""
+msgstr "{keyword} 是Python本身定義的常數, 不能設值\n"
 
 #: message_analyzer.py:128
 msgid ""
@@ -1123,6 +1139,11 @@ msgid ""
 "In older version of Python, 'print' was a keyword.\n"
 "Now, 'print' is a function; you need to use parentheses to call it.\n"
 msgstr ""
+"也許你想要的程式碼是print({message})\n"
+"\n"
+"在舊版的Python2, 'print' 是關鍵字\n"
+"但現在, 'print' 是功能函式\n"
+"使用時要加上小括號(圓括號)\n"
 
 #: session.py:103
 msgid "Level {level} not available; using default."
